@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Structures Hub</title>
+<meta name="description" content="Las herramientas de estructuras del equipo, en un solo lugar: Cargas CSI, Aferentes CSI, Empujes CSI y Pórticos GH. Descarga Structures Hub para Windows.">
+<meta property="og:title" content="Structures Hub">
+<meta property="og:description" content="Las herramientas de estructuras, en un solo lugar.">
+<meta property="og:image" content="monogramas/hub_128.png">
+<link rel="icon" href="monogramas/hub_128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="estilos.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="envoltura">
+    <a class="marca" href="#inicio"><img class="mono-svg" src="monogramas/hub_128.png" width="30" height="30" alt="">Structures Hub</a>
+    <nav class="nav-enlaces" aria-label="Secciones">
+      <a href="#herramientas" data-t="nav_herr">Herramientas</a>
+      <a href="#empezar" data-t="nav_empezar">Cómo empezar</a>
+      <a href="#guia" data-t="nav_guia">Guía</a>
+    </nav>
+    <div class="hueco"></div>
+    <div class="idioma" role="group" aria-label="Idioma / Language">
+      <button type="button" data-idioma="es" aria-pressed="true">ES</button>
+      <button type="button" data-idioma="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" class="boton prim chico descargar"><span class="flecha">↓</span><span class="texto" data-t="nav_descargar">Descargar</span></button>
+  </div>
+</header>
+
+<main>
+<section class="portada" id="inicio">
+  <div class="envoltura">
+    <div class="monogramas" aria-hidden="true">
+      <img class="mono-svg" src="monogramas/cargas-csi_128.png" alt="">
+      <img class="mono-svg" src="monogramas/aferentes-csi_128.png" alt="">
+      <img class="mono-svg" src="monogramas/empujes-csi_128.png" alt="">
+      <img class="mono-svg" src="monogramas/porticos-gh_128.png" alt="">
+    </div>
+    <div class="eti aparecer d1" data-t="hero_eti">Suite de estructuras · SAP2000 · ETABS · Grasshopper</div>
+    <h1 class="aparecer d2" data-t="hero_titulo">Las herramientas de estructuras, en <span class="resalte">un solo lugar</span>.</h1>
+    <p class="entrada aparecer d3" data-t="hero_entrada">Structures Hub instala, actualiza y abre las apps y plugins del equipo. Descárgalo una vez: lo demás llega solo.</p>
+    <div class="acciones aparecer d4">
+      <button type="button" class="boton prim descargar"><span class="flecha">↓</span><span data-t="hero_descargar">Descargar para Windows</span></button>
+      <a class="boton sec" href="#herramientas" data-t="hero_ver">Ver herramientas</a>
+    </div>
+    <div class="meta-descarga aparecer d5"><span class="punto"></span><span data-t="hero_meta" data-v="hub">v0.7</span> · <span data-t="hero_meta2">Windows 10 y 11 · para el equipo de estructuras de AECOM</span></div>
+    <div class="aviso-descarga" id="aviso" role="status" aria-live="polite"></div>
+
+    <div class="demo" id="demo" aria-hidden="true">
+      <div class="demo-ventana">
+        <div class="demo-barra">Structures Hub<span class="luces"><i></i><i></i><i></i></span></div>
+        <div class="demo-cab">
+          <img class="mono-svg" src="monogramas/hub_128.png" width="26" height="26" alt="">
+          <span class="nombre">Structures Hub</span>
+          <div class="demo-seg"><span class="on">Apps</span><span>Plugins</span></div>
+          <div class="demo-cuenta"><span class="av">SS</span><span class="nombre-cuenta">santiago.suarez</span><span class="pt"></span></div>
+        </div>
+        <div class="demo-franja" id="demo-franja" hidden><b>Cargas CSI 1.10</b><span data-t="demo_franja">disponible · notas de la versión</span><span class="mini" data-t="demo_actualizar">Actualizar</span></div>
+        <div class="demo-tarjetas">
+          <div class="demo-tarjeta" style="--c: var(--cc)" id="demo-t1">
+            <div class="fila"><img class="mono-svg" src="monogramas/cargas-csi_128.png" alt=""><b>Cargas CSI</b></div>
+            <span class="demo-chip" id="demo-chip" data-t="demo_no">No instalada</span>
+            <span class="demo-version" data-v="cargas-csi">1.10</span>
+            <div class="demo-accion" id="demo-boton" data-t="demo_instalar">Instalar</div>
+            <div class="demo-progreso" id="demo-progreso" hidden><div class="barra"><span id="demo-barra"></span></div><small id="demo-pct">0 %</small></div>
+          </div>
+          <div class="demo-tarjeta" style="--c: var(--ac)">
+            <div class="fila"><img class="mono-svg" src="monogramas/aferentes-csi_128.png" alt=""><b>Aferentes CSI</b></div>
+            <span class="demo-chip ok" data-t="demo_al_dia">Al día</span>
+            <span class="demo-version" data-v="aferentes-csi">1.7</span>
+            <div class="demo-accion" data-t="demo_abrir">Abrir</div>
+          </div>
+          <div class="demo-tarjeta" style="--c: var(--ec)">
+            <div class="fila"><img class="mono-svg" src="monogramas/empujes-csi_128.png" alt=""><b>Empujes CSI</b></div>
+            <span class="demo-chip ok" data-t="demo_al_dia">Al día</span>
+            <span class="demo-version" data-v="empujes-csi">1.9</span>
+            <div class="demo-accion" data-t="demo_abrir">Abrir</div>
+          </div>
+        </div>
+      </div>
+      <svg class="demo-cursor" id="demo-cursor" viewBox="0 0 24 24"><path d="M4 2l15 10.5-6.6 1.2 3.9 7.3-2.9 1.5-3.9-7.3L4 20z" fill="#fff" stroke="#111214" stroke-width="1.4" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="herramientas">
+  <div class="envoltura">
+    <div class="seccion-cab revelar">
+      <div class="eti" data-t="herr_eti">01 · Herramientas</div>
+      <h2 data-t="herr_titulo">Del Excel al modelo, sin teclear cargas a mano</h2>
+      <p data-t="herr_entrada">Cada herramienta resuelve una parte del trabajo diario y envía el resultado directamente a SAP2000, ETABS o Revit.</p>
+    </div>
+    <div class="herramientas" id="lista-herramientas"></div>
+  </div>
+</section>
+
+<section class="seccion alt" id="empezar">
+  <div class="envoltura">
+    <div class="seccion-cab revelar">
+      <div class="eti" data-t="pasos_eti">02 · Cómo empezar</div>
+      <h2 data-t="pasos_titulo">Empieza en tres pasos</h2>
+      <p data-t="pasos_entrada">Sin instaladores ni permisos de administrador. Cinco minutos, café incluido.</p>
+    </div>
+    <div class="pasos revelar" id="pasos">
+      <div class="pasos-linea"><span></span></div>
+      <div class="paso">
+        <div class="paso-num">01</div>
+        <h3 data-t="p1_t">Descarga</h3>
+        <p data-t="p1_d">Pulsa «Descargar para Windows». Es un solo archivo: <code>StructuresHub.exe</code>.</p>
+      </div>
+      <div class="paso">
+        <div class="paso-num">02</div>
+        <h3 data-t="p2_t">Ábrelo</h3>
+        <p data-t="p2_d">Se instala solo en tu usuario y aparece en el menú Inicio. Desde ahí se actualiza solo.</p>
+      </div>
+      <div class="paso">
+        <div class="paso-num">03</div>
+        <h3 data-t="p3_t">Inicia sesión</h3>
+        <p data-t="p3_d">Con tu correo de AECOM y el código de 6 dígitos que te llega. Después, instala lo que necesites.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="envoltura">
+    <div class="seccion-cab revelar">
+      <div class="eti" data-t="ven_eti">03 · Pensado para el día a día</div>
+      <h2 data-t="ven_titulo">Para que solo pienses en la estructura</h2>
+    </div>
+    <div class="ventajas">
+      <div class="ventaja revelar" style="--c: var(--cc)">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v4h-4"/></svg>
+        <h3 data-t="v1_t">Se actualiza solo</h3><p data-t="v1_d">Cuando sale una versión, una franja te avisa. Un clic y listo; si algo falla, vuelves a la anterior.</p>
+      </div>
+      <div class="ventaja revelar" style="--c: var(--ac)">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+        <h3 data-t="v2_t">Sin administrador</h3><p data-t="v2_d">Todo se instala en tu usuario. No pide permisos especiales ni toca la configuración del equipo.</p>
+      </div>
+      <div class="ventaja revelar" style="--c: var(--ec)">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 9a13 13 0 0 1 18 0M6 12.5a8.5 8.5 0 0 1 12 0M9.2 16a4 4 0 0 1 5.6 0"/><circle cx="12" cy="19.5" r="1"/></svg>
+        <h3 data-t="v3_t">Funciona sin conexión</h3><p data-t="v3_d">La licencia dura 14 días sin internet. Ideal para obra o para cuando la VPN no colabora.</p>
+      </div>
+      <div class="ventaja revelar" style="--c: var(--pg)">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="6" width="18" height="13"/><path d="M3 7l9 6 9-6"/></svg>
+        <h3 data-t="v4_t">Código, no contraseña</h3><p data-t="v4_d">Entras con tu correo de AECOM y un código de un solo uso. Nada que recordar.</p>
+      </div>
+      <div class="ventaja revelar" style="--c: var(--hb)">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 5h9M8.5 3v2M6 5c.5 3 2.5 5.5 5 7M11 5c-.8 3.5-3.5 6.5-7 8"/><path d="M12 21l4.5-10 4.5 10M13.5 18h6"/></svg>
+        <h3 data-t="v5_t">Español e inglés</h3><p data-t="v5_d">Toda la suite habla los dos idiomas y elige el de tu Windows. Lo cambias cuando quieras.</p>
+      </div>
+      <div class="ventaja revelar" style="--c: var(--cc)">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor" stroke="none" style="fill: var(--texto)"/></svg>
+        <h3 data-t="v6_t">Claro y oscuro</h3><p data-t="v6_d">Una misma línea de diseño, Acero, en todas las herramientas. Con tema claro y oscuro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion alt" id="guia">
+  <div class="envoltura">
+    <div class="seccion-cab revelar">
+      <div class="eti" data-t="guia_eti">04 · Guía</div>
+      <h2 data-t="guia_titulo">Preguntas frecuentes</h2>
+      <p data-t="guia_entrada">Lo que suele preguntarse la primera semana.</p>
+    </div>
+    <div class="guia revelar">
+      <details class="pregunta" open>
+        <summary><span data-t="q1">¿Quién puede usar la suite?</span><span class="mas"></span></summary>
+        <div class="respuesta" data-t="r1"><p>El equipo de estructuras de AECOM. Cualquiera puede descargar Structures Hub, pero para abrir las herramientas hay que estar en la lista de miembros: si no estás, pide acceso a un administrador del equipo.</p></div>
+      </details>
+      <details class="pregunta">
+        <summary><span data-t="q2">No me llega el código</span><span class="mas"></span></summary>
+        <div class="respuesta" data-t="r2"><ol><li>Espera de 1 a 3 minutos: a veces tarda.</li><li>Busca en «Otros» o en correo no deseado. Llega de un remitente que Outlook no conoce: pulsa <b>«Trust sender»</b> para que la próxima vez vaya a la bandeja de entrada.</li><li>Si pasaron 10 minutos, el código caduca: pide otro.</li></ol></div>
+      </details>
+      <details class="pregunta">
+        <summary><span data-t="q3">Windows dice que «protegió el equipo»</span><span class="mas"></span></summary>
+        <div class="respuesta" data-t="r3"><p>Es SmartScreen: el archivo todavía no lleva firma digital. Pulsa <b>«Más información»</b> y luego <b>«Ejecutar de todas formas»</b>. Solo pasa la primera vez; las actualizaciones llegan desde el propio Structures Hub.</p></div>
+      </details>
+      <details class="pregunta">
+        <summary><span data-t="q4">¿Qué significan las etiquetas de cada tarjeta?</span><span class="mas"></span></summary>
+        <div class="respuesta" data-t="r4"><ul><li><b>Al día</b>: tienes la última versión.</li><li><b>Versión nueva</b>: hay una actualización; la franja de arriba te deja instalarla.</li><li><b>Pruebas</b>: versión de prueba, solo visible si la activas en ⚙.</li><li><b>No instalada</b>: pulsa «Instalar».</li></ul></div>
+      </details>
+      <details class="pregunta">
+        <summary><span data-t="q5">¿En cuántos equipos puedo usarla?</span><span class="mas"></span></summary>
+        <div class="respuesta" data-t="r5"><p>En 2 equipos por herramienta. Si cambias de portátil, libera el viejo desde el panel de tu cuenta (tu nombre, arriba a la derecha). Un equipo que no se usa en 90 días se libera solo.</p></div>
+      </details>
+      <details class="pregunta">
+        <summary><span data-t="q6">¿Y si no tengo internet?</span><span class="mas"></span></summary>
+        <div class="respuesta" data-t="r6"><p>Las herramientas siguen abriendo durante 14 días desde la última conexión. En equipos de AECOM hay 7 días más de margen. La primera vez sí hace falta conexión.</p></div>
+      </details>
+      <details class="pregunta">
+        <summary><span data-t="q7">¿Cómo abro Pórticos GH?</span><span class="mas"></span></summary>
+        <div class="respuesta" data-t="r7"><p>Instálalo desde la sección <b>Plugins</b> y usa <b>«Abrir ▾»</b>: elige la definición (edificios, naves o el envío a Revit) y se abre en Rhino 8 o en la carpeta de Dynamo.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="envoltura revelar">
+    <div class="franjas" aria-hidden="true"><i style="background: var(--cc)"></i><i style="background: var(--ac)"></i><i style="background: var(--ec)"></i><i style="background: var(--pg)"></i><i style="background: var(--hb)"></i></div>
+    <h2 data-t="final_t">Menos pasos repetidos. Más ingeniería.</h2>
+    <p data-t="final_d">Descarga Structures Hub y ten toda la suite a un clic.</p>
+    <button type="button" class="boton prim descargar"><span class="flecha">↓</span><span data-t="hero_descargar">Descargar para Windows</span></button>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <span class="marca"><img class="mono-svg" src="monogramas/hub_128.png" width="24" height="24" alt="">Structures Hub</span>
+    <span data-t="pie_d">Hecho por y para el equipo de estructuras.</span>
+    <span class="pie-datos" id="pie-datos">Structures-Apps · 2026</span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

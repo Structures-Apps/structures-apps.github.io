@@ -1,0 +1,69 @@
+{
+  "_nota": "Tarjetas de la web. Una entrada por herramienta, con el mismo id que catalogo/catalogo.json y el servicio; la versión se lee en vivo de catalogo(). Monograma: monogramas/<id>_128.png (el del lanzador). Al añadir una herramienta a la suite, añádela aquí (ver docs/NUEVA_HERRAMIENTA.md en structures-hub).",
+  "herramientas": [
+    {
+      "id": "cargas-csi",
+      "nombre": "Cargas CSI",
+      "tipo": "app",
+      "color": "#4DA3FF",
+      "plataforma": "SAP2000 · ETABS",
+      "version": "1.10",
+      "es": {
+        "descripcion": "Envía cargas de barras y nudos desde Excel o tablas a SAP2000 y ETABS.",
+        "puntos": ["Cargas distribuidas y puntuales en barras, y cargas en nudos", "Desde un Excel o capturando filas en la tabla", "Valida antes de enviar y marca en rojo las filas con errores"]
+      },
+      "en": {
+        "descripcion": "Send frame and joint loads from Excel or tables to SAP2000 and ETABS.",
+        "puntos": ["Distributed and point frame loads, plus joint loads", "From an Excel file or typed straight into the table", "Validates before sending and flags rows with errors in red"]
+      }
+    },
+    {
+      "id": "aferentes-csi",
+      "nombre": "Aferentes CSI",
+      "tipo": "app",
+      "color": "#FF8A4C",
+      "plataforma": "AutoCAD → SAP2000 · ETABS",
+      "version": "1.7",
+      "es": {
+        "descripcion": "Calcula cargas lineales por área aferente a partir de las zonas de presión dibujadas en AutoCAD.",
+        "puntos": ["Lee las zonas de un DXF o DWG", "Ancho aferente en verdadera magnitud en cubiertas inclinadas", "Comprueba el equilibrio: presión × área contra cargas"]
+      },
+      "en": {
+        "descripcion": "Computes tributary-area line loads from pressure zones drawn in AutoCAD.",
+        "puntos": ["Reads the zones from a DXF or DWG", "True-length tributary width on sloped roofs", "Checks equilibrium: pressure × area against loads"]
+      }
+    },
+    {
+      "id": "empujes-csi",
+      "nombre": "Empujes CSI",
+      "tipo": "app",
+      "color": "#A78BFA",
+      "plataforma": "SAP2000",
+      "version": "1.9",
+      "es": {
+        "descripcion": "Empujes de suelo, agua, sobrecarga y sismo sobre cajas enterradas, con generador del modelo.",
+        "puntos": ["Reconoce paredes, aberturas y losa desde las tablas", "Cada efecto en su caso de carga: EH, EV, WA, LS y sismo", "Vista 3D, unidades kN·m o kip·ft y modelo nuevo en un paso"]
+      },
+      "en": {
+        "descripcion": "Soil, water, surcharge and seismic pressures on buried boxes, plus a model generator.",
+        "puntos": ["Detects walls, openings and roof slab from the tables", "Each effect in its own load case: EH, EV, WA, LS and seismic", "3D view, kN·m or kip·ft units and a new model in one step"]
+      }
+    },
+    {
+      "id": "porticos-gh",
+      "nombre": "Pórticos GH",
+      "tipo": "plugin",
+      "color": "#2DD4BF",
+      "plataforma": "Rhino 8 · Grasshopper · Revit 2025",
+      "version": "1.0",
+      "es": {
+        "descripcion": "Edificios multipiso y naves industriales paramétricos en Grasshopper, hacia SAP2000, ETABS y Revit.",
+        "puntos": ["Edificios con riostras en V, V invertida y alternadas", "Naves con columnas interiores en malla", "Perfiles AISC y europeos; paso a Revit con Dynamo"]
+      },
+      "en": {
+        "descripcion": "Parametric multi-storey buildings and industrial sheds in Grasshopper, to SAP2000, ETABS and Revit.",
+        "puntos": ["Buildings with V, inverted-V and alternating bracing", "Sheds with interior columns on a grid", "AISC and European sections; on to Revit with Dynamo"]
+      }
+    }
+  ]
+}
