@@ -53,39 +53,37 @@
     <div class="meta-descarga aparecer d5"><span class="punto"></span><span data-t="hero_meta" data-v="hub">v0.7</span> · <span data-t="hero_meta2">Windows 10 y 11 · para el equipo de estructuras de AECOM</span></div>
     <div class="aviso-descarga" id="aviso" role="status" aria-live="polite"></div>
 
-    <div class="demo" id="demo" aria-hidden="true">
-      <div class="demo-ventana">
-        <div class="demo-barra">Structures Hub<span class="luces"><i></i><i></i><i></i></span></div>
-        <div class="demo-cab">
-          <img class="mono-svg" src="monogramas/hub_128.png" width="26" height="26" alt="">
-          <span class="nombre">Structures Hub</span>
-          <div class="demo-seg"><span class="on">Apps</span><span>Plugins</span></div>
-          <div class="demo-cuenta"><span class="av">SS</span><span class="nombre-cuenta">santiago.suarez</span><span class="pt"></span></div>
+    <div class="demo" id="demo">
+      <div class="demo-escena" aria-hidden="true">
+        <div class="demo-ventana" id="demo-ventana">
+          <div class="demo-barra">Structures Hub <span class="demo-vhub" id="demo-vhub">v0.6</span><span class="luces"><i></i><i></i><i></i></span></div>
+          <div class="demo-cab">
+            <img class="mono-svg" src="monogramas/hub_128.png" width="26" height="26" alt="">
+            <span class="nombre">Structures Hub</span>
+            <div class="demo-seg"><span class="on" id="demo-seg-apps">Apps <i>3</i></span><span id="demo-seg-plugins">Plugins <i>1</i></span></div>
+            <span class="demo-hueco"></span>
+            <span class="demo-todo" id="demo-todo" hidden></span>
+            <div class="demo-cuenta"><span class="av">SS</span><span class="nombre-cuenta">santiago.suarez</span><span class="pt"></span></div>
+          </div>
+          <div class="demo-plegable" id="demo-franja"><div><div class="demo-franja" id="demo-franja-txt"></div></div></div>
+          <div class="demo-barra-seccion"><span id="demo-titulo">Apps · 3</span><span class="demo-filtros" id="demo-filtros"><i class="on">Todas</i><i>Instaladas</i><i>Con actualización</i></span></div>
+          <div class="demo-tarjetas" id="demo-tarjetas">
+            <div class="demo-tarjeta" style="--c: var(--cc)"><div class="fila"><img class="mono-svg" src="monogramas/cargas-csi_128.png" alt=""><b>Cargas CSI</b></div><span class="demo-chip">No instalada</span><span class="demo-version">Versión 1.10</span><div class="demo-acciones"><span class="demo-accion">Instalar</span></div></div>
+            <div class="demo-tarjeta" style="--c: var(--ac)"><div class="fila"><img class="mono-svg" src="monogramas/aferentes-csi_128.png" alt=""><b>Aferentes CSI</b></div><span class="demo-chip ok">Instalada · al día</span><span class="demo-version">Versión 1.7</span><div class="demo-acciones"><span class="demo-accion sec">Abrir</span></div></div>
+            <div class="demo-tarjeta" style="--c: var(--ec)"><div class="fila"><img class="mono-svg" src="monogramas/empujes-csi_128.png" alt=""><b>Empujes CSI</b></div><span class="demo-chip ok">Instalada · al día</span><span class="demo-version">Versión 1.9</span><div class="demo-acciones"><span class="demo-accion sec">Abrir</span></div></div>
+          </div>
+          <div class="demo-pie"><span>AECOM · Structures</span><span id="demo-pie">Catálogo al día</span></div>
+          <div class="demo-aviso" id="demo-aviso"></div>
+          <div class="demo-velo" id="demo-velo"><span></span></div>
         </div>
-        <div class="demo-franja" id="demo-franja" hidden><b>Cargas CSI 1.10</b><span data-t="demo_franja">disponible · notas de la versión</span><span class="mini" data-t="demo_actualizar">Actualizar</span></div>
-        <div class="demo-tarjetas">
-          <div class="demo-tarjeta" style="--c: var(--cc)" id="demo-t1">
-            <div class="fila"><img class="mono-svg" src="monogramas/cargas-csi_128.png" alt=""><b>Cargas CSI</b></div>
-            <span class="demo-chip" id="demo-chip" data-t="demo_no">No instalada</span>
-            <span class="demo-version" data-v="cargas-csi">1.10</span>
-            <div class="demo-accion" id="demo-boton" data-t="demo_instalar">Instalar</div>
-            <div class="demo-progreso" id="demo-progreso" hidden><div class="barra"><span id="demo-barra"></span></div><small id="demo-pct">0 %</small></div>
-          </div>
-          <div class="demo-tarjeta" style="--c: var(--ac)">
-            <div class="fila"><img class="mono-svg" src="monogramas/aferentes-csi_128.png" alt=""><b>Aferentes CSI</b></div>
-            <span class="demo-chip ok" data-t="demo_al_dia">Al día</span>
-            <span class="demo-version" data-v="aferentes-csi">1.7</span>
-            <div class="demo-accion" data-t="demo_abrir">Abrir</div>
-          </div>
-          <div class="demo-tarjeta" style="--c: var(--ec)">
-            <div class="fila"><img class="mono-svg" src="monogramas/empujes-csi_128.png" alt=""><b>Empujes CSI</b></div>
-            <span class="demo-chip ok" data-t="demo_al_dia">Al día</span>
-            <span class="demo-version" data-v="empujes-csi">1.9</span>
-            <div class="demo-accion" data-t="demo_abrir">Abrir</div>
-          </div>
+        <div class="demo-app" id="demo-app">
+          <div class="demo-app-barra"><img class="mono-svg" src="monogramas/cargas-csi_128.png" alt="">Cargas CSI <span id="demo-app-v"></span></div>
+          <div class="demo-app-cuerpo"><span class="demo-app-fila"></span><span class="demo-app-fila"></span><span class="demo-app-fila"></span><span class="demo-app-fila corta"></span><span class="demo-app-boton" id="demo-app-boton"></span></div>
         </div>
+        <svg class="demo-cursor" id="demo-cursor" viewBox="0 0 24 24"><path d="M4 2l15 10.5-6.6 1.2 3.9 7.3-2.9 1.5-3.9-7.3L4 20z" fill="#fff" stroke="#111214" stroke-width="1.4" stroke-linejoin="round"/></svg>
       </div>
-      <svg class="demo-cursor" id="demo-cursor" viewBox="0 0 24 24"><path d="M4 2l15 10.5-6.6 1.2 3.9 7.3-2.9 1.5-3.9-7.3L4 20z" fill="#fff" stroke="#111214" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      <div class="demo-pasos" id="demo-pasos" role="group" data-t-label="demo_pasos" aria-label="Pasos de la demostración"></div>
+      <p class="demo-leyenda" id="demo-leyenda" aria-live="polite"></p>
     </div>
   </div>
 </section>
