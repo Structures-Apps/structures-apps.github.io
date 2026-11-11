@@ -390,7 +390,7 @@ async function clic(g) {
 // En reposo, el cursor se aparta hacia la esquina y se desvanece: no tapa la ventana ni los pasos.
 function descansar() { objetivo = null; colocarCursor(); $("#demo-cursor").classList.remove("ver"); }
 // Avance de una descarga: más rápido al principio, como la real, con pintado en el sitio (sin rehacer la tarjeta).
-async function descargar(fijar, ms, g) {
+async function avanceDemo(fijar, ms, g) {
   const pasos = Math.round(ms / 80);
   for (let k = 1; k <= pasos; k += 1) { fijar(100 * (1 - Math.pow(1 - k / pasos, 1.6))); pintarDemo(); await espera(80, g); }
 }
@@ -402,7 +402,7 @@ const ESCENAS = [
     await espera(700, g);
     c.foco = true; await irA('.demo-tarjeta:nth-child(1) [data-b="instalar"]', g); await clic(g);
     c.estado = "desc"; c.pct = 0; pintarDemo();
-    await descargar((p) => { c.pct = p; }, 2300, g);
+    await avanceDemo((p) => { c.pct = p; }, 2300, g);
     c.estado = "al_dia"; c.inst = c.ultima; c.foco = false; descansar(); pintarDemo();
     await avisar(dt("ok", { app: c.nombre, v: c.inst }), g);
   },
@@ -413,7 +413,7 @@ const ESCENAS = [
     await espera(900, g);
     await irA('#demo-todo, .demo-tarjeta:nth-child(2) [data-b="actualizar"]', g, 1100); await clic(g);
     ds.todo = 0; c.estado = "desc"; c.pct = 0; pintarDemo();
-    await descargar((p) => { c.pct = p; }, 2200, g);
+    await avanceDemo((p) => { c.pct = p; }, 2200, g);
     c.estado = "al_dia"; c.inst = c.ultima; c.foco = false; descansar(); pintarDemo();
     await avisar(dt("ok", { app: c.nombre, v: c.inst }), g);
   },
@@ -423,7 +423,7 @@ const ESCENAS = [
     await espera(1100, g);
     await irA('[data-b="hub"]', g); await clic(g);
     ds.hub.fase = "desc"; ds.hub.pct = 0; descansar(); pintarDemo();
-    await descargar((p) => { ds.hub.pct = p; }, 2000, g);
+    await avanceDemo((p) => { ds.hub.pct = p; }, 2000, g);
     await espera(300, g);
     ds.velo = true; pintarDemo();
     await espera(900, g);
